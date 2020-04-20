@@ -5,10 +5,8 @@ public class ShortStory {
 
     public static void main(String[] args) throws Exception {
 
-        Camel.load("bale", new Bale())
-              .go(route ->
-                  route.from("timer:start")
-                       .to("bean:bale"));
+        Caravan.load("bale", new Bale())
+              .go(Camel.from("timer:start").to("bean:bale"));
 
     }
 }
